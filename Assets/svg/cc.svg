@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <!-- Enhanced Gradients -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF0080"/>
+      <stop offset="50%" style="stop-color:#FF4D4D"/>
+      <stop offset="100%" style="stop-color:#FF8C00"/>
+    </linearGradient>
+    
+    <linearGradient id="secondaryGradient" x1="0%" y1="100%" x2="100%" y0="0%">
+      <stop offset="0%" style="stop-color:#7928CA"/>
+      <stop offset="50%" style="stop-color:#4C4CFF"/>
+      <stop offset="100%" style="stop-color:#00C2FF"/>
+    </linearGradient>
+    
+    <!-- Glowing Effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Circular Aura -->
+  <circle cx="100" cy="100" r="80" fill="url(#primaryGradient)" opacity="0.1"/>
+  
+  <!-- Main Icon - Modern House Heart -->
+  <path d="
+    M100 20 
+    L170 80 
+    A20 20 0 0 1 170 110
+    L140 110
+    A40 40 0 0 1 60 110
+    L30 110
+    A20 20 0 0 1 30 80
+    Z" 
+    fill="url(#primaryGradient)"
+    filter="url(#glow)"/>
+
+  <!-- Stylized Caregiver Figure -->
+  <path d="
+    M100 55
+    A18 18 0 0 1 100 90
+    Q125 95 125 125
+    L75 125
+    Q75 95 100 90
+    Z" 
+    fill="url(#secondaryGradient)"
+    filter="url(#glow)"/>
+
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="67" r="10" fill="#FFF" opacity="0.9"/>
+  
+  <!-- Enhanced Sparkles -->
+  <g filter="url(#glow)">
+    <path d="M40 60 L47 67 L54 60 L47 53 Z" fill="#FFF" opacity="0.9"/>
+    <path d="M146 60 L153 67 L160 60 L153 53 Z" fill="#FFF" opacity="0.9"/>
+    <path d="M100 135 L107 142 L114 135 L107 128 Z" fill="#FFF" opacity="0.9"/>
+  </g>
+  
+  <!-- Dynamic Flow Lines -->
+  <g filter="url(#glow)">
+    <path d="M30 90 Q100 65 170 90" stroke="#FFF" stroke-width="3" fill="none" opacity="0.6"/>
+    <path d="M40 100 Q100 75 160 100" stroke="#FFF" stroke-width="2" fill="none" opacity="0.5"/>
+    <path d="M50 110 Q100 85 150 110" stroke="#FFF" stroke-width="1" fill="none" opacity="0.4"/>
+  </g>
+
+  <!-- Additional Decorative Elements -->
+  <circle cx="35" cy="95" r="3" fill="#FFF" opacity="0.8"/>
+  <circle cx="165" cy="95" r="3" fill="#FFF" opacity="0.8"/>
+  <circle cx="100" cy="140" r="3" fill="#FFF" opacity="0.8"/>
+</svg>

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'View/WelcomePage/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,11 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-
-      home:  null,
+    return GetMaterialApp(
+      title: 'Home Sakhi',
+      debugShowCheckedModeBanner: false,
+      home: OnboardingScreen(),
     );
   }
 }
-
